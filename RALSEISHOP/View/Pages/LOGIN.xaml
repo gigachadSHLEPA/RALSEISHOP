@@ -1,0 +1,72 @@
+﻿<Page x:Class="RALSEISHOP.View.Pages.LOGIN"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RALSEISHOP.View.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="200" d:DesignWidth="400"
+      Title="LOGIN"
+      Background="Transparent"
+      Foreground="Transparent"
+      xmlns:gif="http://wpfanimatedgif.codeplex.com">
+
+    <Border Height="200" Width="400">
+        <Grid>
+            
+
+            <Image Source="/images/fon.png"/>
+            <Image gif:ImageBehavior.RepeatBehavior="Forever"
+       gif:ImageBehavior.AnimatedSource="/video/RALSEIchibiSLEEP.gif" Margin="262,85,5,22" />
+
+            <TextBlock Text="* Who are you?"  Foreground="White" Style="{StaticResource TxtFont1}" FontSize="25" Margin="10,10,157,155" RenderTransformOrigin="0.504,0.557">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.Target="{Binding ElementName = MyWipedText}" 
+                                    Storyboard.TargetProperty="(TextBlock.Width)"
+                                    From="0" To="233" Duration="0:0:0.65" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+            <TextBlock Text="* Only his friends" Foreground="White" Style="{StaticResource TxtFont1}" FontSize="25" Margin="10,50,89,120" RenderTransformOrigin="0.502,0.567">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.Target="{Binding ElementName = MyWipedText}" 
+                                    Storyboard.TargetProperty="(TextBlock.Width)"
+                                    From="0" To="301" Duration="0:0:0.65" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+            <TextBlock Text="can be here." Foreground="White" Style="{StaticResource TxtFont1}" FontSize="25" Margin="45,85,168,89" RenderTransformOrigin="0.505,0.577" TextAlignment="Right">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.Target="{Binding ElementName = MyWipedText}" 
+                                    Storyboard.TargetProperty="(TextBlock.Width)"
+                                    From="0" To="187" Duration="0:0:0.65" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+            <TextBlock Text="———————" Foreground="White" Style="{StaticResource TxtFont1}" FontSize="27" Margin="45,156,168,18"/>
+
+            <TextBox BorderThickness="0" x:Name="TB" Width="187" Style="{StaticResource TxtFont2}" HorizontalAlignment="Right" FontSize="30" Background="Transparent" Foreground="White" Margin="0,141,168,22" />
+
+
+
+        </Grid>
+    </Border>
+</Page>
