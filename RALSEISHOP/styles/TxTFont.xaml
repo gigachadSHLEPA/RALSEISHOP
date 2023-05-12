@@ -6,4 +6,7 @@
     <Style TargetType="TextBox" x:Key="TxtFont2">
         <Setter Property="TextElement.FontFamily" Value="/fonts/#big shot"/>
     </Style>
+    <Style TargetType="Expander" x:Key="TxtFont3">
+        <Setter Property="TextElement.FontFamily" Value="/fonts/#big shot"/>
+    </Style>
 </ResourceDictionary>

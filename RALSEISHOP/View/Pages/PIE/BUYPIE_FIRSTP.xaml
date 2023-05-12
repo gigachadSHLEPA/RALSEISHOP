@@ -1,0 +1,103 @@
+﻿<Page x:Class="RALSEISHOP.View.Pages.PIE.BUYPIE_FIRSTP"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RALSEISHOP.View.Pages.PIE"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BUYPIE_FIRSTP" xmlns:gif="http://wpfanimatedgif.codeplex.com"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <Border Height="300" Width="700">
+        <Grid>
+            <Image gif:ImageBehavior.RepeatBehavior="Forever"
+       gif:ImageBehavior.AnimatedSource="/video/Ralsei_battle_idle.gif" Margin="38,-70,518,252" />
+            <Image Source="/images/fon22.png"/>
+            <Image Source="/images/KRIS.png" Margin="54,255,595,5"/>
+            <Image Source="/images/dialog.png" Margin="135,-113,399,331">
+            </Image>
+
+
+            <TextBlock Text="* PIE" FontSize="20" Foreground="Gray" Style="{StaticResource TxtFont1}" Margin="83,36,523,243" />
+            <TextBlock Text="* MAGIC BOOK" FontSize="20" Foreground="White" Style="{StaticResource TxtFont1}" Margin="83,82,456,196" />
+            <TextBlock Text="* COOKIES" FontSize="20" Foreground="White" Style="{StaticResource TxtFont1}" Margin="83,127,299,151" />
+            <materialDesign:Card >
+                <StackPanel Margin="58,10,188,40" >
+                    <Expander
+      Header="      " >
+                        <StackPanel
+        Margin="24,8,24,16"
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                            <TextBlock  TextWrapping="Wrap" Background="Black"
+          Text="You know I love baking pies, right? Well... I think they're good enough to sell, yes! Don't look at me like that..." Style="{StaticResource TxtFont1}" Foreground="White" Height="183"/>
+
+                        </StackPanel>
+                    </Expander>
+                    <Expander
+      Header="         "  >
+
+                        <StackPanel
+        Margin="24,8,24,16"
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                            <TextBlock Background="Black"
+          Text="It contains all the knowledge of magic that I know! I confess... Some pages are a little torn, but that doesn't affect the quality of the knowledge! It talks about healing, levitation, transformation, cooking, moving, hypnotizing, protecting, attacking... *there's too much, but he goes on*" Style="{StaticResource TxtFont1}" Foreground="White" TextWrapping="Wrap" Height="137" />
+
+                        </StackPanel>
+                    </Expander>
+                    <Border
+      Style="{StaticResource HorizontalDividerBorder}" />
+                    <Border
+      Style="{StaticResource HorizontalDividerBorder}" />
+                    <Expander
+      HorizontalAlignment="Stretch"
+      Header="      ">
+                        <StackPanel
+        Margin="24,8,24,16"
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                            <TextBlock Background="Black"
+          Text="I tried making cookies... can you taste how they taste?" Style="{StaticResource TxtFont1}" Foreground="White" TextWrapping="Wrap" />
+
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </materialDesign:Card>
+            <Image Source="/images/kastil.png" Margin="57,7,617,265"/>
+            <TextBlock Text="BUY " FontSize="50" Foreground="White" Style="{StaticResource TxtFont1}" Margin="534,9,72,236">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.Target="{Binding ElementName = MyFadingText}" 
+                                    Storyboard.TargetProperty="(TextBlock.Opacity)"
+                                    From="1.0" To="0.0" Duration="0:0:1" 
+                                    AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+
+            <TextBlock Text="PIE" FontSize="15" Foreground="GRAY" Style="{StaticResource TxtFont1}" Margin="534,72,69,207" />
+            <TextBlock Text="MAGIC BOOK" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="534,98,109,161" TextWrapping="Wrap" />
+            <TextBlock Text="COOKIES" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="534,145,87,100" TextWrapping="Wrap" />
+
+            <TextBlock Text="2$" FontSize="15" Foreground="Gray" Style="{StaticResource TxtFont1}" Margin="613,72,55,207" />
+            <TextBlock Text="30$" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="613,98,55,181" />
+            <TextBlock Text="1$" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="613,145,55,134" />
+            <TextBlock Text="If you want to leave, poke me." FontSize="13" Foreground="White" Style="{StaticResource TxtFont1}" Margin="180,-103,410,351" TextWrapping="Wrap">
+            </TextBlock>
+            <TextBlock Text="KRIS"  Foreground="White" Style="{StaticResource TxtFont1}" FontSize="25" Margin="110,266,525,10" RenderTransformOrigin="0.504,0.557"/>
+            <Image Source="/images/reversestrelka.png" Margin="521,173,62,39" RenderTransformOrigin="1,1"/>
+            <Button
+                 Click="ButtonBase_OnClick" Height="35" Width="107" Opacity="0" Margin="529,200,64,66"/>
+            <TextBlock Text="$46.21" FontSize="25" Foreground="White" Style="{StaticResource TxtFont1}" Margin="552,265,55,4" TextWrapping="Wrap"/>
+            <TextBlock Text="LV1 Leader"  Foreground="White" Style="{StaticResource TxtFont1}" FontSize="25" Margin="344,266,174,10" RenderTransformOrigin="0.504,0.557"/>
+            <Image Source="/images/soul.png" Margin="304,270,360,10"/>
+        </Grid>
+    </Border>
+</Page>

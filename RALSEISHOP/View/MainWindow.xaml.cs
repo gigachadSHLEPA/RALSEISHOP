@@ -27,7 +27,7 @@ namespace RALSEISHOP
             InitializeComponent();
 
             Core1.MyCore = MainFrame;
-            MainFrame.Navigate(new LOGIN());
+            MainFrame.Navigate(new RALSEIAWAKE());
         }
     }
 }

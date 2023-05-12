@@ -9,6 +9,7 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/styles/TxTFont.xaml"/>
+                <ResourceDictionary Source="/Styles/Expander.xaml"/>
                 <materialDesign:BundledTheme
                     BaseTheme="{x:Null}"
                     PrimaryColor="{x:Null}"

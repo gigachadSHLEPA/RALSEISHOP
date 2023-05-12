@@ -25,6 +25,9 @@ namespace RALSEISHOP.View.Pages
             InitializeComponent();
         }
 
-       
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

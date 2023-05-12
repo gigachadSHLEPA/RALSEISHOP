@@ -1,0 +1,112 @@
+﻿<Page x:Class="RALSEISHOP.View.Pages.MONEY.BOOKm.BUYCOOKIES_SECONDtoP2_BOOK_"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RALSEISHOP.View.Pages.MONEY.BOOKm"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="BUYCOOKIES_SECONDtoP2_BOOK_" xmlns:gif="http://wpfanimatedgif.codeplex.com"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes">
+
+    <Border Height="300" Width="700">
+
+        <Grid Cursor="">
+            <Image gif:ImageBehavior.RepeatBehavior="Forever"
+       gif:ImageBehavior.AnimatedSource="/video/Ralsei_battle_idle.gif" Margin="38,-70,518,252" />
+            <Image Source="/images/fon22.png"/>
+            <Image Source="/images/KRIS.png" Margin="54,255,595,5"/>
+            <Image Source="/images/dialog.png"  Margin="135,-113,399,331">
+
+            </Image>
+
+
+            <TextBlock Text="* SWORD" FontSize="20" Foreground="White" Style="{StaticResource TxtFont1}" Margin="83,36,523,243" />
+            <TextBlock Text="* MOSS" FontSize="20" Foreground="White" Style="{StaticResource TxtFont1}" Margin="83,82,537,196" />
+            <TextBlock Text="* PRINCE OF DARKNESS HAT" FontSize="20" Foreground="White" Style="{StaticResource TxtFont1}" Margin="83,127,299,151" />
+            <materialDesign:Card >
+                <StackPanel Margin="58,10,188,40" >
+                    <Expander
+      Header="      " >
+                        <StackPanel
+        Margin="24,8,24,16"
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                            <TextBlock  TextWrapping="Wrap" Background="Black"
+          Text="This is your first sword! The same one you wore in your outfit on our first adventure. I found it by chance in the trash... picked it up and honed it to perfection - I don't really want to sell it, but since it was originally yours..." Style="{StaticResource TxtFont1}" Foreground="White" Height="183"/>
+
+                        </StackPanel>
+                    </Expander>
+                    <Expander
+      Header="         "  >
+
+                        <StackPanel
+        Margin="24,8,24,16"
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                            <TextBlock Background="Black"
+          Text="I think you'll like it?.. Well, I've seen you eat it a lot.  I wanted to try it too, but the taste... not for everyone." Style="{StaticResource TxtFont1}" Foreground="White" TextWrapping="Wrap" Height="137" />
+
+                        </StackPanel>
+                    </Expander>
+                    <Border
+      Style="{StaticResource HorizontalDividerBorder}" />
+                    <Border
+      Style="{StaticResource HorizontalDividerBorder}" />
+                    <Expander
+      HorizontalAlignment="Stretch"
+      Header="      ">
+                        <StackPanel
+        Margin="24,8,24,16"
+        Orientation="Vertical"
+        TextBlock.Foreground="{DynamicResource MaterialDesignBody}">
+                            <TextBlock Background="Black"
+          Text="My hat! The very real one and the best one. I have a lot of them... too many, and I thought, «Why don't I sell them?» I assure you, it's made of the finest material! As Prince of Darkness, I only let myself wear the best! (from the materials available)" Style="{StaticResource TxtFont1}" Foreground="White" TextWrapping="Wrap" />
+
+                        </StackPanel>
+                    </Expander>
+                </StackPanel>
+            </materialDesign:Card>
+            <Image Source="/images/kastil.png" Margin="57,7,617,265"/>
+            <TextBlock Text="BUY " FontSize="50" Foreground="White" Style="{StaticResource TxtFont1}" Margin="534,9,72,236">
+                <TextBlock.Triggers>
+                    <EventTrigger RoutedEvent="TextBlock.Loaded">
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation
+                                    Storyboard.Target="{Binding ElementName = MyFadingText}" 
+                                    Storyboard.TargetProperty="(TextBlock.Opacity)"
+                                    From="1.0" To="0.0" Duration="0:0:1" 
+                                    AutoReverse="True" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger>
+                </TextBlock.Triggers>
+            </TextBlock>
+
+            <TextBlock Text="SWORD" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="534,72,69,207" />
+            <TextBlock Text="MOSS" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="534,98,69,181" />
+            <TextBlock Text="PRINCE OF DARKNESS HAT" FontSize="11" Foreground="White" Style="{StaticResource TxtFont1}" Margin="534,124,87,121" TextWrapping="Wrap" />
+            <TextBlock Text="SWORD" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="534,72,69,207" />
+            <TextBlock Text="0$" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="613,72,55,207" />
+            <TextBlock Text="10$" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="613,98,55,181" />
+            <TextBlock Text="15$" FontSize="15" Foreground="White" Style="{StaticResource TxtFont1}" Margin="613,124,55,155" />
+            <TextBlock Text="If you want to leave, poke me." FontSize="13" Foreground="White" Style="{StaticResource TxtFont1}" Margin="180,-103,410,351" TextWrapping="Wrap">
+
+            </TextBlock>
+            <TextBlock Text="KRIS"  Foreground="White" Style="{StaticResource TxtFont1}" FontSize="25" Margin="110,266,525,10" RenderTransformOrigin="0.504,0.557"/>
+
+
+
+            <Image Source="/images/strelka.png" Margin="523,177,60,35"/>
+            <Button
+                 Click="ButtonBase_OnClick" Height="35" Width="107" Opacity="0" Margin="534,192,66,58"/>
+            <TextBlock Text="LV1 Leader"  Foreground="White" Style="{StaticResource TxtFont1}" FontSize="25" Margin="344,266,174,10" RenderTransformOrigin="0.504,0.557"/>
+            <Image Source="/images/soul.png" Margin="304,270,360,10"/>
+            <TextBlock Text="$17.21" FontSize="25" Foreground="White" Style="{StaticResource TxtFont1}" Margin="552,265,55,4" TextWrapping="Wrap"/>
+            <Button Opacity="0" Margin="534,63,112,205" Click="Button_Click_1"/>
+            <Button Opacity="0" Margin="534,92,109,176" Click="Button_Click"/>
+            <Button Opacity="0" Margin="534,124,92,136" Height="40" Click="Button_Click_2"/>
+        </Grid>
+    </Border>
+</Page>

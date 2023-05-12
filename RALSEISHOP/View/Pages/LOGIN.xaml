@@ -12,8 +12,9 @@
       xmlns:gif="http://wpfanimatedgif.codeplex.com">
 
     <Border Height="200" Width="400">
+        
         <Grid>
-            
+
 
             <Image Source="/images/fon.png"/>
             <Image gif:ImageBehavior.RepeatBehavior="Forever"
@@ -33,7 +34,11 @@
                     </EventTrigger>
                 </TextBlock.Triggers>
             </TextBlock>
-            <TextBlock Text="* Only his friends" Foreground="White" Style="{StaticResource TxtFont1}" FontSize="25" Margin="10,50,89,120" RenderTransformOrigin="0.502,0.567">
+            <ProgressBar
+  IsIndeterminate="True"
+  Orientation="Horizontal"
+                Background="White" Foreground="Gray" RenderTransformOrigin="0.54,5.595" Margin="45,170,168,26"/>
+            <TextBlock Text="* Only his friends " Foreground="White" Style="{StaticResource TxtFont1}" FontSize="25" Margin="10,50,89,120" RenderTransformOrigin="0.502,0.567">
                 <TextBlock.Triggers>
                     <EventTrigger RoutedEvent="TextBlock.Loaded">
                         <BeginStoryboard>
@@ -61,7 +66,10 @@
                     </EventTrigger>
                 </TextBlock.Triggers>
             </TextBlock>
-            <TextBlock Text="———————" Foreground="White" Style="{StaticResource TxtFont1}" FontSize="27" Margin="45,156,168,18"/>
+            <Button
+  
+  Click="ButtonBase_OnClick" Height="70" Margin="282,108,36,22" Opacity="0"
+   />
 
             <TextBox BorderThickness="0" x:Name="TB" Width="187" Style="{StaticResource TxtFont2}" HorizontalAlignment="Right" FontSize="30" Background="Transparent" Foreground="White" Margin="0,141,168,22" />
 
